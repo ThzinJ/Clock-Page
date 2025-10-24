@@ -1,0 +1,54 @@
+:root {
+    --color-dark: #000;
+    --color-white: #fff;
+    --color-light: #ababab;
+    --color-purple: #5d15a5;
+}
+
+* {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    
+    font-weight: 200;
+    
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    gap: 50px;
+}
+
+.clock {
+    font-family: 'BBH Sans Hegarty', monospace;
+    
+    display: flex;
+    gap: 20px;
+    
+    span {
+        font-size: 40px;
+        
+        display: flex;
+        align-items: center;
+        gap: 19px;
+    }
+    
+    span:not(:last-child)::after {
+        content: ':';
+        
+        margin-bottom: 10px;
+    }
+}
+
+span strong{
+    color: var(--color-purple);
+    font-weight: 900;
+}
