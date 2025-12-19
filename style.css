@@ -6,7 +6,7 @@
 }
 
 * {
-    background-color: var(--color-dark);
+    background-color: transparent;
     color: var(--color-white);
     
     font-weight: 200;
@@ -25,6 +25,8 @@ body {
     flex-direction: column;
     
     gap: 50px;
+    
+    animation: trocaceu 9s ease-in-out infinite;
 }
 
 .clock {
@@ -51,4 +53,72 @@ body {
 span strong{
     color: var(--color-purple);
     font-weight: 900;
+}
+
+.clock, h2 {
+    position: relative;
+    top: -100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 250px;
+    
+    position: absolute;
+    bottom: -150px;
+    
+    animation: troca 9s ease-in-out infinite;
+}
+
+.sol, .lua {
+    height: 140px;
+    width: 140px;
+    
+    border-radius: 100%;
+}
+
+.sol {
+    background: #FFBA01;
+    box-shadow: 0 0 30px 10px #FFBA01;
+}
+
+.lua {
+    background: #868686;
+    box-shadow: 0 0 20px 0 #FFFFFF;
+}
+
+@keyframes troca {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trocaceu {
+    0%, 100% {
+        background: #45D6E1;
+    }
+    
+    50% {
+        background: #000;
+    }
+    
+    70% {
+        background: #734800;
+    }
+    
+    75% {
+        background: #FF9F00;
+    }
 }
